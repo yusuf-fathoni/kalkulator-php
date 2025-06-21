@@ -1,0 +1,61 @@
+Program ini merupakan kalkulator berbasis web yang dibuat menggunakan HTML, CSS, dan PHP. Fungsinya adalah untuk melakukan operasi aritmatika dasar, seperti penjumlahan, pengurangan, perkalian, dan pembagian, berdasarkan input dari pengguna.
+
+1. Tampilan Antarmuka Pengguna (HTML & CSS)
+Program pertama-tama menampilkan form input di halaman web. Form ini terdiri dari:
+
+Input angka pertama
+Pengguna diminta untuk memasukkan angka pertama.
+
+Dropdown operator
+Pengguna bisa memilih salah satu dari empat operator: tambah (+), kurang (-), kali (*), atau bagi (/).
+
+Input angka kedua
+Pengguna juga harus memasukkan angka kedua.
+
+Tombol "Hitung"
+Jika tombol ini ditekan, data dari form akan dikirim ke server menggunakan metode POST.
+
+Tampilan form ini dibuat menarik dan rapi menggunakan CSS. Warna latar belakang, bayangan kotak, dan desain tombol disesuaikan agar lebih user-friendly.
+
+2. Pemrosesan Data (PHP)
+Setelah pengguna menekan tombol "Hitung", proses perhitungan dilakukan oleh skrip PHP sebagai berikut:
+
+a. Pengambilan Data
+PHP mengambil data dari form menggunakan variabel $_POST, yaitu:
+
+$angka1 → nilai dari input angka pertama.
+
+$angka2 → nilai dari input angka kedua.
+
+$operator → nilai dari operator yang dipilih.
+
+b. Proses Perhitungan
+PHP kemudian memeriksa jenis operator yang dipilih pengguna menggunakan struktur if-else:
+
+Jika operator adalah +, maka angka pertama dan kedua dijumlahkan.
+
+Jika operator adalah -, maka dilakukan pengurangan.
+
+Jika operator adalah *, maka dilakukan perkalian.
+
+Jika operator adalah /, maka:
+
+Jika angka kedua adalah nol, maka program akan menampilkan pesan "Tidak bisa dibagi dengan nol".
+
+Jika bukan nol, maka dilakukan pembagian biasa.
+
+c. Menampilkan Hasil
+Setelah hasil perhitungan diperoleh, PHP akan menampilkannya kembali di halaman yang sama, tepat di bawah form. Hasil ini ditampilkan menggunakan elemen HTML dengan kelas CSS .hasil, yang membuat teks hasil terlihat jelas dan menarik.
+
+3. Contoh Penggunaan
+Misalnya, pengguna memasukkan:
+
+Angka pertama: 10
+
+Operator: * (perkalian)
+
+Angka kedua: 5
+
+Maka program akan menampilkan:
+
+Hasil: 50
